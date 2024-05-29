@@ -1,0 +1,336 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@" : {
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        }
+      }
+    },
+    "%lld pts for %@ from %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld pts for %2$@ from %3$@"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld pkt dla %2$@ od %3$@"
+          }
+        }
+      }
+    },
+    "%lld: %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld: %2$@"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld: %2$@"
+          }
+        }
+      }
+    },
+    "%lld: %@, votes: %lld" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld: %2$@, votes: %3$lld"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld: %2$@, głosy: %3$lld"
+          }
+        }
+      }
+    },
+    "Add Card" : {
+      "comment" : "Button for adding a new card",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dodaj Kartę"
+          }
+        }
+      }
+    },
+    "Add Contestant" : {
+      "comment" : "Button for adding a new contestant",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dodaj Uczestnika"
+          }
+        }
+      }
+    },
+    "Add Voter" : {
+      "comment" : "Button for adding a new voter",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dodaj Głosującego"
+          }
+        }
+      }
+    },
+    "Ascending" : {
+      "comment" : "Sorting option ascending",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rosnąco"
+          }
+        }
+      }
+    },
+    "Contestant" : {
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uczestnik"
+          }
+        }
+      }
+    },
+    "Contestants" : {
+      "comment" : "Tab item name",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uczestnicy"
+          }
+        }
+      }
+    },
+    "Delete" : {
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usuń"
+          }
+        }
+      }
+    },
+    "Descending" : {
+      "comment" : "Sorting option descending",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Malejąco"
+          }
+        }
+      }
+    },
+    "Hidden cards" : {
+
+    },
+    "Hide all" : {
+      "comment" : "Title of a button that hides all cards"
+    },
+    "Name" : {
+      "comment" : "Sort option by name",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Imię"
+          }
+        }
+      }
+    },
+    "No Contestants" : {
+      "comment" : "Title of empty state on list of contestants",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brak Uczestników"
+          }
+        }
+      }
+    },
+    "No vote cards." : {
+      "comment" : "Title of empty state on vote cards list",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brak kart do głosowania."
+          }
+        }
+      }
+    },
+    "No Voters" : {
+      "comment" : "Title of empty state on list of voters",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brak Głosujących"
+          }
+        }
+      }
+    },
+    "Not possible to create vote cards. Add at least one contestant and one voter to continue." : {
+      "comment" : "Title of empty state on vote cards list",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dodawanie kart nie jest możliwe. Dodaj co najmniej jednego Uczestnika i jednego Głosującego aby kontynuować."
+          }
+        }
+      }
+    },
+    "Number" : {
+      "comment" : "Sort option by running number",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Numer"
+          }
+        }
+      }
+    },
+    "Points" : {
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Punkty"
+          }
+        }
+      }
+    },
+    "Reveal all" : {
+      "comment" : "Title of a button that reveals all cards"
+    },
+    "Reveal/hide all cards menu" : {
+      "comment" : "Title of the menu that will show or hide all cards at once"
+    },
+    "Revealed" : {
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Odsłonięta"
+          }
+        }
+      }
+    },
+    "Revealed cards" : {
+
+    },
+    "Running number" : {
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Numer uczestnika"
+          }
+        }
+      }
+    },
+    "Save" : {
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zapisz"
+          }
+        }
+      }
+    },
+    "Sorting" : {
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sortowanie"
+          }
+        }
+      }
+    },
+    "Sorting order" : {
+      "comment" : "Title of the sorting order picker",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kolejność sortowania"
+          }
+        }
+      }
+    },
+    "Sorting value" : {
+      "comment" : "Title of the sorting value picker",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klucz sortowania"
+          }
+        }
+      }
+    },
+    "Vote Cards" : {
+      "comment" : "Tab item name",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Karty"
+          }
+        }
+      }
+    },
+    "Voter" : {
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Głosujący"
+          }
+        }
+      }
+    },
+    "Voters" : {
+      "comment" : "Tab item name",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Głosujący"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
