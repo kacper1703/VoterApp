@@ -31,7 +31,8 @@ final class DataStore {
         addContestants: Bool = true,
         addVoters: Bool = true,
         addCards: Bool = true,
-        count: Int = 5
+        count: Int = 5,
+        revealAll: Bool = false
     ) -> ModelContainer {
         do {
             let schema = Schema([
@@ -52,8 +53,8 @@ final class DataStore {
                 let voter = Voter(name: "\(shuffledNames[i % names.count]) \(i)")
                 let voteCard = VoteCard(voter: voter,
                                         contestant: contestant,
-                                        points: .random(in: 0...100),
-                                        isRevealed: .random())
+                                        points: .random(in: 1...100),
+                                        isRevealed: revealAll ? true : .random())
 
                 if addContestants {
                     container.mainContext.insert(contestant)

@@ -27,7 +27,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let windowSceneObject = WindowSceneObject(windowScene)
 
         if session.role == .windowExternalDisplayNonInteractive {
-            let contentView = ExternalView()
+            let contentView = LeaderboardView()
                 .modelContainer(DataStore.sharedModelContainer)
                 .environmentObject(windowSceneObject)
             window.rootViewController = UIHostingController(rootView: contentView)

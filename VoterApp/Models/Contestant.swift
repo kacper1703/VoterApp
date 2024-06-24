@@ -26,7 +26,7 @@ final class Contestant: Identifiable {
 
     var lastModified: Date = Date.now
 
-    internal init(
+    init(
         name: String,
         runningNumber: Int
     ) {

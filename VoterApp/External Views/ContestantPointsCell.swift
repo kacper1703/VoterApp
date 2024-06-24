@@ -18,45 +18,28 @@ extension Contestant: ContestantProtocol { }
 
 struct ContestantPointsCell: View {
 
-    @Environment(\.modelContext) private var modelContext
-
-    @Query
-    private var contestants: [Contestant]
-
-    init(contestantID: Contestant.ID) {
-        _contestants = .init(filter: #Predicate<Contestant> {
-            $0.id == contestantID
-        })
-    }
-
-    init() {
-        _contestants = .init()
-    }
+    var contestant: ContestantProtocol
 
     let accentColor: Color = Color.blue
 
     var body: some View {
-        if let contestant = contestants.first {
-            HStack {
-                runningNumber(contestant)
-                Text(contestant.name)
-                    .font(.largeTitle.weight(.medium))
-                Spacer()
-                voteCount(contestant)
-            }
-            .padding()
-            .overlay(
-                Capsule(style: .continuous)
-                    .stroke(accentColor, lineWidth: 5)
-            )
-            .opacity(contestant.revealedVotesCount == 0 ? 0.6 : 1)
+        HStack {
+            runningNumber
+            Text(contestant.name)
+                .font(.largeTitle.weight(.medium))
+            Spacer()
+            voteCount
         }
+        .padding()
+        .overlay(
+            Capsule(style: .continuous)
+                .stroke(accentColor, lineWidth: 5)
+        )
     }
 
-    @ViewBuilder
-    private func runningNumber(_ contestant: Contestant) -> some View {
+    private var runningNumber: some View {
         Text(String(contestant.runningNumber))
-            .font(.title2.monospaced().bold())
+            .font(.title3.monospaced().bold())
             .foregroundColor(.primary)
             .padding(.horizontal, 8)
             .overlay(
@@ -65,21 +48,15 @@ struct ContestantPointsCell: View {
             )
     }
 
-    @ViewBuilder
-    private func voteCount(_ contestant: Contestant) -> some View {
-        Group {
-            if !contestant.voteCards.isEmpty && contestant.revealedVotesCount == 0 {
-                Text(verbatim: "?")
-            } else {
-                Text(String(contestant.revealedVotesCount))
-            }
-        }
-        .font(.title2.monospaced().bold())
-        .padding(.horizontal, 8)
-        .overlay(
-            Capsule()
-                .fill(accentColor.tertiary)
-        )
+    private var voteCount: some View {
+        Text(String(contestant.revealedVotesCount))
+            .contentTransition(.numericText())
+            .font(.title.bold())
+            .padding(8)
+            .overlay(
+                Capsule()
+                    .fill(accentColor.tertiary)
+            )
     }
 }
 
@@ -90,19 +67,11 @@ private struct DemoContestant: ContestantProtocol {
 }
 
 #Preview(
-    "With votes",
     traits: .sizeThatFitsLayout
 ) {
-    ContestantPointsCell()
-        .modelContainer(DataStore.previewContainer)
-        .padding()
-}
+    var contestant = DemoContestant()
+    contestant.revealedVotesCount = 20
 
-#Preview(
-    "No Votes",
-    traits: .sizeThatFitsLayout
-) {
-    ContestantPointsCell()
-        .modelContainer(DataStore.previewContainer)
+    return ContestantPointsCell(contestant: contestant)
         .padding()
 }

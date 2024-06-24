@@ -56,7 +56,7 @@ struct MyMain: App {
             .compactMap { $0 as? UIWindowScene }
             .first { $0.screen == screen }
 
-        let view = ExternalView().modelContext(.init(DataStore.sharedModelContainer))
+        let view = LeaderboardView().modelContext(.init(DataStore.sharedModelContainer))
         let controller = UIHostingController(rootView: view)
         window.rootViewController = controller
         window.isHidden = false
