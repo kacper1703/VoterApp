@@ -1,4 +1,5 @@
 {
+  "originHash" : "c4b693552028f1bab371b424e67e8a262fa031ee4386a0c5c965ee88091dd4eb",
   "pins" : [
     {
       "identity" : "sfsymbols",
@@ -10,5 +11,5 @@
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }
