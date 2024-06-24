@@ -37,7 +37,7 @@ struct MyMain: App {
     var body: some Scene {
         WindowGroup {
             ControlPanelView()
-                .modelContainer(DataStore.previewContainer) // ninja
+                .modelContainer(DataStore.sharedModelContainer)
                 .onReceive(
                     screenDidConnectPublisher,
                     perform: screenDidConnect
@@ -56,14 +56,14 @@ struct MyMain: App {
             .compactMap { $0 as? UIWindowScene }
             .first { $0.screen == screen }
 
-        let view = ExternalView().modelContext(.init(DataStore.previewContainer))  // ninja
+        let view = ExternalView().modelContext(.init(DataStore.sharedModelContainer))
         let controller = UIHostingController(rootView: view)
         window.rootViewController = controller
         window.isHidden = false
         additionalWindows.append(window)
     }
 
-    private func screenDidDisconnect(_ screen: UIScreen) { // ninja: not removed
+    private func screenDidDisconnect(_ screen: UIScreen) {
         additionalWindows.removeAll {
             $0.screen === screen
         }

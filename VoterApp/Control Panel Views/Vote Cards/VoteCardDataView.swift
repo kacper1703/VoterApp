@@ -23,7 +23,7 @@ struct VoteCardDataView: View {
     @State private var points: String
     @State private var isRevealed: Bool
 
-    @State private var error: String? // ninja: separate error message for all sections
+    @State private var error: String?
     @State private var isCorrect: Bool = false
 
     private var card: VoteCard?
@@ -149,14 +149,14 @@ struct VoteCardDataView: View {
                                    contestant: contestant,
                                    points: points,
                                    isRevealed: isRevealed)
-                modelContext.insert(new) // ninja: external update not working when adding
+                modelContext.insert(new)
             }
             contestant.recalculateRevealedVotes()
 
             try modelContext.save()
             dismiss()
         } catch {
-            print("Error saving: \(error)") // ninja: alert
+            print("Error saving: \(error)")
         }
     }
 
@@ -169,7 +169,7 @@ struct VoteCardDataView: View {
         isCorrect = errors.isEmpty
     }
 
-    private func delete() { // ninja: confirm
+    private func delete() {
         if let card {
             modelContext.delete(card)
 
@@ -181,7 +181,7 @@ struct VoteCardDataView: View {
                 try modelContext.save()
                 dismiss()
             } catch {
-                print("Error deleting: \(error)") // ninja: alert
+                print("Error deleting: \(error)")
             }
         }
     }

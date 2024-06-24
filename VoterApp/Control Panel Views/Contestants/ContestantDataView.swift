@@ -86,7 +86,7 @@ struct ContestantDataView: View {
                 dismiss()
             }
         } catch {
-            print("Error saving: \(error)") // ninja: alert
+            print("Error saving: \(error)")
         }
     }
 
@@ -113,7 +113,7 @@ struct ContestantDataView: View {
     private func delete() {
         Task {
             guard
-                await Alert.showAsync(title: "Are you sure?", // ninja: localize
+                await Alert.showAsync(title: "Are you sure?",
                                       message: "Deleting this contestant will also delete all of the associated voting cards.",
                                       buttons: [.continue.styledDestructive, .cancel]) == .continue else {
                 return
@@ -128,7 +128,7 @@ struct ContestantDataView: View {
                         try modelContext.save()
                         dismiss()
                     } catch {
-                        print("Error deleting: \(error)") // ninja: alert
+                        print("Error deleting: \(error)")
                     }
                 }
             }
@@ -139,5 +139,6 @@ struct ContestantDataView: View {
 #Preview {
     NavigationView {
         ContestantDataView()
+            .modelContainer(DataStore.previewContainer)
     }
 }

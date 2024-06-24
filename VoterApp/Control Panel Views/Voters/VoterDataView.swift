@@ -74,7 +74,7 @@ struct VoterDataView: View {
             try modelContext.save()
             dismiss()
         } catch {
-            print("Error saving: \(error)") // ninja: alert
+            print("Error saving: \(error)")
         }
     }
 
@@ -108,7 +108,7 @@ struct VoterDataView: View {
                         try modelContext.save()
                         dismiss()
                     } catch {
-                        print("Error deleting: \(error)") // ninja: alert
+                        print("Error deleting: \(error)")
                     }
                 }
             }
